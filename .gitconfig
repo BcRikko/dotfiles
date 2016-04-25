@@ -1,0 +1,38 @@
+[push]
+        default = simple
+[user]
+        name = BcRikko
+[alias]
+        alias = !git config --get-regexp '^alias\\.' | sed 's/alias\\.\\([^ ]*\\) \\(.*\\)/\\1\\\t => \\2/' | sort
+# checkout (co)
+        co       = checkout
+        cob      = checkout -b
+        cod      = checkout develop
+        com      = checkout master
+# branch (b)
+        b        = branch
+        bl       = branch -l
+        ba       = branch -a
+        bd       = branch -d
+# pull
+        pf       = pull --ff
+# push
+        po       = push origin
+        puf      = push --force-with-lease
+# merge (m)
+        mnf      = merge --no-ff
+# cherry-pick (cp)
+        cp       = cherry-pick
+        cpm      = cherry-pick -m 1
+# log (l)
+        l        = log --oneline
+        ls       = log --oneline --stat
+        lg       = log --graph --branches --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(green)- %an, %cr%Creset'
+        lp       = log --oneline -p
+# stash (st)
+        stl      = stash list
+        stp      = stash pop
+        sts      = stash save
+# other
+        skip     = update-index --skip-worktree
+        skip-no  = update-index --no-skip-worktree
