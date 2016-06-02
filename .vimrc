@@ -19,8 +19,6 @@ set expandtab
 set incsearch
 " 行番号を表示する
 set number
-" 不可視文字を表示する
-set list
 " 対応する括弧を表示する
 set showmatch
 " 改行時にオートインデントする
