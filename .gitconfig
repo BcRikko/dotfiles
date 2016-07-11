@@ -1,41 +1,45 @@
 [push]
-    default = simple
+  default = simple
 [user]
-    name = BcRikko
+  name = BcRikko
 [alias]
-    alias = !git config --get-regexp '^alias\\.' | sed 's/alias\\.\\([^ ]*\\) \\(.*\\)/\\1\\\t => \\2/' | sort
+  alias = !git config --get-regexp '^alias\\.' | sed 's/alias\\.\\([^ ]*\\) \\(.*\\)/\\1\\\t => \\2/' | sort
 # checkout (co)
-    co       = checkout
-    cob      = checkout -b
-    cod      = checkout develop
-    com      = checkout master
+  co  = checkout
+  cob = checkout -b
+  cod = checkout dev-v3.2
+  com = checkout master
 # branch (b)
-    b        = branch
-    bl       = branch -l
-    ba       = branch -a
-    bd       = branch -d
-    bD       = branch -D
+  b  = branch
+  bl = branch -l
+  ba = branch -a
+  bd = branch -d
+  bD = branch -D
 # pull
-    pf       = pull --ff
+  pf = pull --ff
 # push
-    po       = push origin
-    puf      = push --force-with-lease
+  po  = push origin
+  puf = push --force-with-lease
 # merge (m)
-    mnf      = merge --no-ff
+  mnf = merge --no-ff
 # cherry-pick (cp)
-    cp       = cherry-pick
-    cpm      = cherry-pick -m 1
+  cp  = cherry-pick
+  cpm = cherry-pick -m 1
 # log (l)
-    l        = log --oneline
-    ls       = log --oneline --stat
-    lg       = log --graph --branches --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(green)- %an, %cr%Creset'
-    lp       = log --oneline -p
+  l  = log --oneline
+  ls = log --oneline --stat
+  lg = log --graph --branches --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(green)- %an, %cr%Creset'
+  lp = log --oneline -p
 # stash (st)
-    stl      = stash list
-    stp      = stash pop
-    sts      = stash save
+  stl = stash list
+  stp = stash pop
+  sts = stash save
 # other
-    skip     = update-index --skip-worktree
-    skip-no  = update-index --no-skip-worktree
-    soft     = reset --soft HEAD~
-    hard     = reset --hard HEAD~
+  skip = update-index --skip-worktree
+  skip-no = update-index --no-skip-worktree
+  soft = reset --soft
+  hard = reset --hard
+  rev  = revert -m 1
+
+[core]
+	autocrlf = false
