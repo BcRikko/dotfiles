@@ -5,10 +5,11 @@
 [alias]
   alias = !git config --get-regexp '^alias\\.' | sed 's/alias\\.\\([^ ]*\\) \\(.*\\)/\\1\\\t => \\2/' | sort
 # checkout (co)
-  co  = checkout
-  cob = checkout -b
-  cod = checkout dev-v3.2
-  com = checkout master
+  co   = checkout
+  cob  = checkout -b
+  cod  = checkout dev-v3.2
+  com  = checkout master
+  cobr = checkout -t
 # branch (b)
   b  = branch
   bl = branch -l
@@ -21,7 +22,8 @@
   po  = push origin
   puf = push --force-with-lease
 # merge (m)
-  mnf = merge --no-ff
+  mnf    = merge --no-ff
+  squash = rebase -i
 # cherry-pick (cp)
   cp  = cherry-pick
   cpm = cherry-pick -m 1
@@ -40,6 +42,9 @@
   soft = reset --soft
   hard = reset --hard
   rev  = revert -m 1
+# setup
+  local-setup = !git config user.name "BcRikko" && git config user.email "{email}"
+  init-commit = commit --allow-empty -m ':seedling: initial commit'
 
 [core]
-	autocrlf = false
+  autocrlf = false
