@@ -2,6 +2,7 @@
   default = simple
 [user]
   name = BcRikko
+  email = "my email"
 [alias]
   alias = !git config --get-regexp '^alias\\.' | sed 's/alias\\.\\([^ ]*\\) \\(.*\\)/\\1\\\t => \\2/' | sort
 # checkout (co)
