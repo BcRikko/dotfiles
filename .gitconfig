@@ -8,7 +8,7 @@
 # checkout (co)
   co   = checkout
   cob  = checkout -b
-  cod  = checkout dev-v3.2
+  cod  = checkout develop
   com  = checkout master
   cobr = checkout -t
 # branch (b)
@@ -17,6 +17,8 @@
   ba = branch -a
   bd = branch -d
   bD = branch -D
+  bren = branch -m
+  feD = !git fetch -p 2>&1 | grep [deleted] | awk '{print $5}' | sed "s/origin\\///" | xargs git branch -D
 # pull
   pf = pull --ff
 # push
