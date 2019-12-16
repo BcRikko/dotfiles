@@ -11,6 +11,7 @@
   cod  = checkout develop
   com  = checkout master
   cobr = checkout -t
+  copr = "!sh -c 'git fetch origin pull/$1/head:$2 && git checkout $2' -"
 # branch (b)
   b  = branch
   bl = branch -l
